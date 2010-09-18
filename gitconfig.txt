@@ -1,6 +1,3 @@
-[user]
-	name = rf
-	email = rf0444@gmail.com
 [color]
 	ui = auto
 [core]
