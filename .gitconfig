@@ -1,0 +1,9 @@
+[user]
+	name = rf
+	email = rf0444@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = vim
+[alias]
+	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
