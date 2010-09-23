@@ -3,4 +3,14 @@
 [core]
 	editor = vim
 [alias]
+	st = status
+	di = diff
+	co = checkout
+	br = branch
+	ci = commit
+	cia = commit -a
+	ciam = commit --amend
+	rs = reset
+	rh = reset --hard
 	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
+	la = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'

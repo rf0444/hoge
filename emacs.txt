@@ -1,0 +1,32 @@
+;; 個人拡張
+(setq load-path (cons "~/.emacs.d/elisp" load-path))
+
+;; Coq拡張
+(load-file "/usr/share/emacs/site-lisp/proofgeneral/generic/proof-site.el")
+
+;; OCaml拡張
+; ocaml-mode
+(setq auto-mode-alist
+      (cons '("\\.ml[iylp]?$" . caml-mode) auto-mode-alist))
+(autoload 'caml-mode "caml" "Major mode for editing Caml code." t)
+(autoload 'run-caml "inf-caml" "Run an inferior Caml process." t)
+(global-set-key "\C-q" 'caml-types-show-type)
+; tuareg-mode
+(setq auto-mode-alist (cons '("\\.ml[iylp]?$" . tuareg-mode) auto-mode-alist))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+(add-to-list 'auto-mode-alist '("\\.ml\\w?" . tuareg-mode))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+(dolist (ext '(".cmo" ".cmx" ".cma" ".cmxa" ".cmi"))
+  (add-to-list 'completion-ignored-extensions ext))
+
+;; screen拡張設定
+(load "elscreen" "ElScreen" t)
+
+;; 基本設定
+(tool-bar-mode 0)
+(setq delete-auto-file t)
+(setq completion-ignore-case t)
+(global-linum-mode t)
+
