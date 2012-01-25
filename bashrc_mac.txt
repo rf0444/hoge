@@ -1,0 +1,40 @@
+export PATH=$HOME/Library/play-1.2.4:/Applications/CoqIdE_8.3pl3.app/Contents/Resources/bin:$HOME/Library/Haskell/bin:/opt/local/bin:/opt/local/sbin/:$PATH
+export MANPATH=/opt/local/man:$MANPATH
+export JAVA_OPTS="-Dfile.encoding=UTF-8"
+
+export EDITOR=vim
+
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
+
+PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(__git_ps1)\[\e[0m\]\n\$ '
+#PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lla='ls -la'
+
+alias vi=vim
+alias vr='vi -R'
+alias sl='ls'
+alias s='ls'
+
+alias em='emacs'
+alias cemacs='emacs -nw'
+alias cem='emacs -nw'
+
+alias gitk='gitk --all &'
+
+alias scala='scala-2.9 -deprecation'
+alias scalac='scalac-2.9'
+alias scalap='scalap-2.9'
+
+alias coq='coqtop'
+alias coqide='/Applications/CoqIdE_8.3pl3.app/Contents/MacOS/startcoqide'
+
+set -o vi
+bind '"\C-l": clear-screen'
+bind '"\C-j": vi-movement-mode'
+
