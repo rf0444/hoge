@@ -1,3 +1,6 @@
+[user]
+	name = 
+	email = 
 [color]
 	ui = auto
 [core]
@@ -14,8 +17,8 @@
 	cim = commit --amend
 	rs = reset
 	rh = reset --hard
-	rv = remote -v
 	ra = remote add
+	rv = remote -v
 	ru = remote update --prune
 	log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
 	la = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
