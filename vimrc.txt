@@ -33,5 +33,5 @@ vmap ,/ :s;^;//;<CR>:nohlsearch<CR>
 vmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
 vmap ,c :s;//;;<CR>:nohlsearch<CR>
 
-set enc=utf-8
-set fenc=utf-8
+set fileencodings=utf-8,sjis,cp932,euc-jp
+
