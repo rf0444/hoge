@@ -9,12 +9,17 @@
 	adda = add -A
 	st = status
 	di = diff
+	dic = diff --cached
 	co = checkout
 	br = branch
 	cl = clone
+	clx = clean -dxf
 	ci = commit
 	cia = commit -a
 	cim = commit --amend
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
 	rs = reset
 	rh = reset --hard
 	ra = remote add
