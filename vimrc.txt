@@ -9,6 +9,7 @@ call vundle#rc()
 Bundle 'Shougo/vimproc'
 Bundle 'Shougo/unite.vim'
 Bundle 'Shougo/neocomplcache'
+Bundle 'tpope/vim-surround'
 
 " for files
 Bundle 'Shougo/vimshell'

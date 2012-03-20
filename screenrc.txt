@@ -1,4 +1,3 @@
 hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
-bind U eval "encoding utf8" "!!!echo 'export LANG=ja_JP.UTF-8'"
-bind E eval "encoding eucjp" "!!!echo 'export LANG=ja_JP.eucJP'"
 startup_message off
+defscrollback 3000

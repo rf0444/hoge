@@ -1,18 +1,18 @@
-export PATH=$HOME/Library/play-1.2.4:/Applications/CoqIdE_8.3pl3.app/Contents/Resources/bin:$HOME/Library/Haskell/bin:/opt/local/bin:/opt/local/sbin/:$PATH
-export MANPATH=/opt/local/man:$MANPATH
+export PATH=$HOME/Library/play-1.2.4:/Applications/CoqIdE_8.3pl3.app/Contents/Resources/bin:$HOME/Library/mongo/bin:$HOME/Library/Haskell/bin:/usr/local/mysql/bin/:/usr/local/bin:/usr/local/sbin/:$PATH
+export MANPATH=/usr/local/man:$MANPATH
 export JAVA_OPTS="-Dfile.encoding=UTF-8"
 
 export EDITOR=vim
 
-if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
 fi
 
 PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(__git_ps1)\[\e[0m\]\n\$ '
 #PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '
 
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -a'
 alias l='ls -CF'
 alias lla='ls -la'
 
