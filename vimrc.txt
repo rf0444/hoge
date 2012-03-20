@@ -28,6 +28,10 @@ Bundle 'ujihisa/unite-haskellimport'
 
 " for Coq
 Bundle 'eagletmt/coqtop-vim'
+Bundle 'jvoorhis/coq.vim'
+
+" for haxe
+Bundle 'jdonaldson/vaxe'
 
 " for xml
 Bundle 'mattn/zencoding-vim'

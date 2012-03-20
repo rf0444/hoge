@@ -1,26 +1,28 @@
 [user]
 	name = 
 	email = 
-[core]
-	editor = vim -c \"set fenc=utf-8\"
 [color]
 	ui = auto
+[core]
+	editor = vim
 [gui]
 	encoding = utf-8
 [push]
 	default = current
 [alias]
-	adda = add -A
+	adda = add -A :/
 	st = status
 	di = diff
 	dic = diff --cached
 	co = checkout
 	br = branch
 	cl = clone
-	clx = clean -dxf
+	clf = clean -dxf
+	cln = clean -dxn
 	ci = commit
 	cia = commit -a
 	cim = commit --amend
+	cimc = commit --amend -C HEAD
 	rbi = rebase -i
 	rbc = rebase --continue
 	rba = rebase --abort
