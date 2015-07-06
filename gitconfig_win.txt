@@ -4,7 +4,7 @@
 [color]
 	ui = auto
 [core]
-	editor = vim
+	editor = gvim
 [gui]
 	encoding = utf-8
 [push]

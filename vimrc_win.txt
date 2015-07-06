@@ -1,0 +1,87 @@
+" NeoBundle
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+"" for NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+"" for basis
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+"" for files
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'scrooloose/nerdtree'
+"" for scala
+NeoBundle 'derekwyatt/vim-scala'
+"" for Haskell
+"Bundle 'eagletmt/ghci-vim'
+"Bundle 'eagletmt/ghcmod-vim'
+"Bundle 'eagletmt/unite-haddock'
+"Bundle 'ujihisa/neco-ghc'
+"Bundle 'ujihisa/unite-haskellimport'
+"" for Coq
+"Bundle 'eagletmt/coqtop-vim'
+"Bundle 'jvoorhis/coq.vim'
+"" for haxe
+"Bundle 'jdonaldson/vaxe'
+"" for xml
+"Bundle 'mattn/zencoding-vim'
+"" for Syntastic
+"Bundle 'scrooloose/syntastic'
+call neobundle#end()
+
+filetype plugin indent on
+
+" confs
+syntax on
+let loaded_matchparen=1
+set ambiwidth=double
+set autoindent
+set backspace=indent,eol,start
+set clipboard+=unnamed
+set directory=$VIM
+set encoding=utf-8
+set fdm=marker
+set fileencodings=utf-8,sjis,cp932,euc-jp
+set fileformats=unix,dos,mac
+set history=200
+set hlsearch
+set laststatus=2
+set modeline
+set nobackup
+set number
+set shiftwidth=4
+set showmatch
+set showmode
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set tabstop=4
+set tags=tags
+set textwidth=0
+set undodir=C:/Users/rf/.vim/undo
+
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+inoremap <C-j> <ESC>
+
+nnoremap <C-n> :bn<CR>
+nnoremap <C-p> :bp<CR>
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nmap <F3> :VimFiler -explorer -parent -winwidth=50<CR>
+
+nmap <C-a>y :%y<CR>
+nmap <C-a>d :%d<CR>
+
+nmap ,/ :s;^;//;<CR>:nohlsearch<CR>
+nmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
+nmap ,c :s;//;;<CR>:nohlsearch<CR>
+vmap ,/ :s;^;//;<CR>:nohlsearch<CR>
+vmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
+vmap ,c :s;//;;<CR>:nohlsearch<CR>
