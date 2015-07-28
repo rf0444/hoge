@@ -18,6 +18,12 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'scrooloose/nerdtree'
 "" for scala
 NeoBundle 'derekwyatt/vim-scala'
+"" for purescript
+NeoBundle 'raichoo/purescript-vim'
+"" for elm
+NeoBundle 'lambdatoast/elm.vim'
+"" for haxe
+"Bundle 'jdonaldson/vaxe'
 "" for Haskell
 "Bundle 'eagletmt/ghci-vim'
 "Bundle 'eagletmt/ghcmod-vim'
@@ -27,21 +33,19 @@ NeoBundle 'derekwyatt/vim-scala'
 "" for Coq
 "Bundle 'eagletmt/coqtop-vim'
 "Bundle 'jvoorhis/coq.vim'
-"" for haxe
-"Bundle 'jdonaldson/vaxe'
 "" for xml
 "Bundle 'mattn/zencoding-vim'
 "" for Syntastic
 "Bundle 'scrooloose/syntastic'
 call neobundle#end()
 
-filetype plugin indent on
+filetype plugin on
+filetype indent off
 
 " confs
 syntax on
 let loaded_matchparen=1
 set ambiwidth=double
-set autoindent
 set backspace=indent,eol,start
 set clipboard+=unnamed
 set directory=$VIM
@@ -53,7 +57,9 @@ set history=200
 set hlsearch
 set laststatus=2
 set modeline
+set noautoindent
 set nobackup
+set nosmartindent
 set number
 set shiftwidth=4
 set showmatch
@@ -85,3 +91,5 @@ nmap ,c :s;//;;<CR>:nohlsearch<CR>
 vmap ,/ :s;^;//;<CR>:nohlsearch<CR>
 vmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
 vmap ,c :s;//;;<CR>:nohlsearch<CR>
+
+nmap :W :w
