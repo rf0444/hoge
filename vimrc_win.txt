@@ -18,12 +18,12 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'scrooloose/nerdtree'
 "" for scala
 NeoBundle 'derekwyatt/vim-scala'
-"" for purescript
-NeoBundle 'raichoo/purescript-vim'
-"" for elm
-NeoBundle 'lambdatoast/elm.vim'
+""" for elm
+"NeoBundle 'lambdatoast/elm.vim'
 "" for haxe
 "Bundle 'jdonaldson/vaxe'
+"" for purs
+NeoBundle 'raichoo/purescript-vim'
 "" for Haskell
 "Bundle 'eagletmt/ghci-vim'
 "Bundle 'eagletmt/ghcmod-vim'
@@ -39,13 +39,14 @@ NeoBundle 'lambdatoast/elm.vim'
 "Bundle 'scrooloose/syntastic'
 call neobundle#end()
 
-filetype plugin on
-filetype indent off
+filetype plugin indent on
 
 " confs
 syntax on
 let loaded_matchparen=1
 set ambiwidth=double
+set noautoindent
+set indentexpr=
 set backspace=indent,eol,start
 set clipboard+=unnamed
 set directory=$VIM
@@ -53,13 +54,11 @@ set encoding=utf-8
 set fdm=marker
 set fileencodings=utf-8,sjis,cp932,euc-jp
 set fileformats=unix,dos,mac
-set history=200
+set history=1000
 set hlsearch
 set laststatus=2
 set modeline
-set noautoindent
 set nobackup
-set nosmartindent
 set number
 set shiftwidth=4
 set showmatch
@@ -80,7 +79,7 @@ inoremap <C-j> <ESC>
 nnoremap <C-n> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-nmap <F3> :VimFiler -explorer -parent -winwidth=50<CR>
+nmap <F3> :VimFiler -explorer -parent -winwidth=80<CR>
 
 nmap <C-a>y :%y<CR>
 nmap <C-a>d :%d<CR>
