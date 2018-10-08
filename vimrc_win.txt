@@ -46,7 +46,6 @@ syntax on
 let loaded_matchparen=1
 set ambiwidth=double
 set noautoindent
-set indentexpr=
 set backspace=indent,eol,start
 set clipboard+=unnamed
 set directory=$VIM
@@ -92,3 +91,5 @@ vmap ,\ :s;^\([\t ]*\);\1//;<CR>:nohlsearch<CR>
 vmap ,c :s;//;;<CR>:nohlsearch<CR>
 
 nmap :W :w
+
+autocmd FileType html setlocal indentexpr=
